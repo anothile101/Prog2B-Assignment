@@ -1,3 +1,25 @@
+Part 1 of the POE
+Overview
+This project is a prototype for a web-based Lecturer Claims Management System designed to simplify the submission, verification, and processing of lecturer claims.It was developed using ASP.NET MVC (C#) to model the user interface, workflows, and navigation before implementing full functionality in Part 2.the goal of Part 1 was to design the front-end structure and logical flow of the system, focusing on user experience, layout consistency, and role-based dashboards.
+
+Objectives
+To create a user-friendly prototype interface for the claims management system.
+To design separate views and navigation for:
+Lecturers submit claims and view their claim history.
+Programme coordinators view review, approve, or reject claims.
+Academic managers view to process approved claims and generate reports.
+
+Technologies Used
+C#
+ASP.NET MVC
+Visual Studio
+
+Limitations 
+No real database data handled with in-memory lists.Buttons and forms simulated; no backend logic.File uploads and totals not stored persistently.
+Basic styling no external CSS or javaScript frameworks.
+
+
+Part 2 of the POE
 Overview
 The Monthly Contract Claim Management System is a web-based ASP.NET MVC application designed to streamline and automate the process of submitting, approving, and processing lecturer claims within an academic environment.
 The system provides separate dashboards for Lecturers, Coordinators, and Managers, ensuring transparency, accountability, and efficient claim handling from submission to final approval.
