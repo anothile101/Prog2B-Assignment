@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+<h2 style="text-align:left; color:black;">Welcome Lecturer, </h2>
+<hr />
+<a href="/Coordinator/Dashboard" style="background:#007bff; color:white; padding:7px 7px; border-radius:10px; text-decoration:none;">Go to Coordinator Dashboard →</a>
+
+
+@if (TempData["Success"] != null)
+{
+    <div style="background:#d4edda; color:#155724; padding:10px; border-radius:8px; text-align:center;">@TempData["Success"]</div>
+}
+
+@* <div style="text-align:center; margin-bottom:20px;">
+    <a href="/Lecturer/SubmitClaim" style="background:#007bff; color:white; padding:14px 30px; border-radius:12px; text-decoration:none; font-weight:bold;">Create New Claim</a>
+    <a href="/Lecturer/MyClaims" style="background:#6c757d; color:white; padding:14px 30px; border-radius:12px; text-decoration:none; font-weight:bold; margin-left:10px;">My Claims</a>
+</div> *@
+<div style="background:#f9f9f9;border-radius:15px;padding:20px;margin-bottom:25px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);text-align:center;">
+    <h4 style="color:black;margin-bottom:15px;">Quick Access</h4>
+
+    <table style="width:auto; margin:auto; border-spacing:10px; text-align:center;">
+        <tr>
+            <td>
+                <a href="/Lecturer/SubmitClaim"
+                   style="background:#007bff;color:white;padding:8px 18px;
+                          border-radius:8px;text-decoration:none;display:inline-block;font-size:14px;">
+                    Create New Claim
+                </a>
+            </td>
+            <td>
+                <a href="/Lecturer/MyClaims"
+                   style="background:#6c757d;color:white;padding:8px 18px;
+                          border-radius:8px;text-decoration:none;display:inline-block;font-size:14px;">
+                    My Claims
+                </a>
+            </td>
+            @* <td>
+                <a href="/Home/DownloadClaimForm"
+                   style="background:white;color:#007bff;padding:8px 18px;
+                          border-radius:8px;text-decoration:none;display:inline-block;
+                          border:1px solid #007bff;font-size:14px;">
+                    Download Claim Form
+                </a>
+            </td> *@
+            <td>
+                <a href="#"
+                   onclick="alert('If you need help, follow the basic steps or contact your coordinator.')"
+                   style="background:white;color:#007bff;padding:8px 18px;
+                          border-radius:8px;text-decoration:none;display:inline-block;
+                          border:1px solid #007bff;font-size:14px;">
+                    Help & Support
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+<div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+    <div style="flex:1; min-width:260px; background:#f9f9f9; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h4 style="color:black;">Claim Summary</h4>
+        <p>Total: @ViewBag.TotalClaims</p>
+        <p>Pending: @ViewBag.Pending</p>
+        <p>Approved: @ViewBag.Approved</p>
+        <p>Rejected: @ViewBag.Rejected</p>
+    </div>
+
+    <div style="flex:1; min-width:260px; background:#f9f9f9; border-radius:15px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <h4 style="color:black;">Recent Activity</h4>
+        <ul>
+            @foreach (var c in (IEnumerable<prog_practice.Models.Claim>)ViewBag.RecentClaims)
+            {
+                var color = c.Status == "Approved" ? "green" : (c.Status == "Rejected" ? "red" : "orange");
+                <li>Claim #@c.ClaimID — <span style="color:@color;">@c.Status</span></li>
+            }
+        </ul>
+    </div>
+</div>

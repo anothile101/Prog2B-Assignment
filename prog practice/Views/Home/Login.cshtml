@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div style="max-width:400px; margin:auto; margin-top:100px; background:#f9f9f9;
+            border-radius:15px; padding:30px; box-shadow:0 4px 10px rgba(0,0,0,0.1);
+            text-align:center; font-family:Arial;">
+    <h2 style="color:black;">Contract Monthly Claim System Login</h2>
+    <hr />
+
+    @if (ViewBag.Error != null)
+    {
+        <div style="background:#f8d7da; color:#721c24; padding:10px; border-radius:8px; margin-bottom:10px;">
+            @ViewBag.Error
+        </div>
+    }
+
+    <form method="post" action="/Home/Login">
+        <div style="text-align:left; margin-bottom:15px;">
+            <label><strong>Username:</strong></label>
+            <input type="text" name="username" required
+                   style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;" />
+        </div>
+
+        <div style="text-align:left; margin-bottom:20px;">
+            <label><strong>Password:</strong></label>
+            <input type="password" name="password" required
+                   style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;" />
+        </div>
+
+        <button type="submit"
+                style="background:black; color:white; border:none; padding:12px 25px; border-radius:10px; font-size:16px;">
+            Login
+        </button>
+    </form>
+</div>
+
+<select name="role" style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;">
+    <option value="Lecturer">Lecturer</option>
+    <option value="Coordinator">Coordinator</option>
+    <option value="Manager">Manager</option>
+</select>
