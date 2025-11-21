@@ -58,8 +58,7 @@ Razor Views
 HTML, CSS, Bootstrap style inline
 ASP.NET Core MVC.NET 9
 Database	Microsoft SQL Server with Entity Framework Core
-Language	C#
-Entity Framework Core for the first migrations
+Coding Language	C#
 IDE	Visual Studio 
 File Handling	IWebHostEnvironment for uploads
 
@@ -69,23 +68,137 @@ Submit new claims via Create New Claim.
 Coordinator reviews claims approves or rejects.
 Manager finalizes processes approved claims.
 History updates and reports can be downloaded.
-
-Unit Testing Overview
-Add claim
-Process claim
-Claim approval 
-Claim rejection
-Encryption and decryption 
-
-Database Setup Instructions
-In visual studio open tools then package manager console
-Then run the command "add-migration create"
-Then update database
+Login page to authenticate users by their user roles
+ 
 
 Database design
-Consisted of two tables
--Claims
-ClaimID,lecturer name,claim title ,description,claim month,hours worked,hourly rate,amount,status,document path,last updated,updated by. 
+Consisted of 6 tables
+User
+User Role
+Document
+Lecturer Report
+Claim
+Login
 
--ClaimHistories
-HistoryID,claimID,performed by,timestamp	
+Overview
+Part 3 represents the full implementation phase of the Monthly Contract Claim Management System.
+Unlike Part 1 (prototype) and Part 2 (partial backend integration), this stage delivers a complete, functional system with:
+-A connected SQL Server database
+-Real authentication
+-Role-based redirection
+-Claim workflow automation
+-HR user management
+-File uploads
+-Fully functional dashboards
+-Reporting and audit features
+
+Objectives in Part 3
+Full Database Integration Using Entity Framework Core
+-Creation of database tables using migrations
+-Seeding of default users and roles
+-Full CRUD operations for Users, Claims, and Reviews
+-Joins using Include() for dashboard summaries
+
+Fully Working Authentication System
+-Login page validates credentials against the database
+-Password and email must match existing user records
+-Role-based login redirection:
+
+-Lecturer → Lecturer Dashboard
+-Programme Coordinator → Coordinator Dashboard
+-Academic Manager → Manager Dashboard
+-HR → HR Dashboard
+
+1.Lecturer Claim Management
+Lecturers can:
+-Submit new monthly contract claims
+-Upload supporting documents
+-Automatically calculate totals (Hours × Hourly Rate)
+-View claim statuses (Pending, Approved, Rejected)
+-Track recent activity
+
+2.Programme Coordinator Claim Review
+Coordinators can:
+-View all submitted claims
+-Approve or reject claims
+-Add comments
+-View claim history and status distribution
+-Access reports and analytics
+
+3.Academic Manager Final Approval
+Managers can:
+-View all coordinator-approved claims
+-Finalise approval or rejection
+-Process financial totals
+-View analytics and historical records
+-Access audit trail items
+
+4.HR User Management
+HR admins can:
+-Create new system users
+-Assign roles (Lecturer, Coordinator, Manager, HR)
+-Edit user details
+-View all registered users
+-Generate financial and claim reports
+
+5.Document Upload & Storage
+-The system supports document uploads (PDF, Word, Images):
+-Validates file size
+-Generates unique filenames
+-Stores files in wwwroot/uploads
+-Allowed file extensions enforced
+
+6.Reporting Features
+HR and Managers can download PDF reports that include:
+-Lecturer totals
+-Monthly totals
+-Claim summaries
+-Financial breakdowns
+Reports include:
+-Claim ID
+-Module
+-Hours worked
+-Amount
+-Status
+-Submission date
+
+7.Enhanced GUI & UX
+The system uses:
+-Bootstrap 5 for styling
+-Responsive dashboards
+-Quick-access action buttons
+-Summary cards
+-Analytics sections
+-Navigation menus
+-Clean, modern interface
+
+Technologies Used
+-Frontend
+-ASP.NET Razor Views
+-HTML5 / Bootstrap 5
+-Partial views for layout consistency
+-Backend
+-ASP.NET Core MVC
+-C#
+-Entity Framework Core
+-LINQ queries
+-iText7 for PDF report generation
+-Database
+-SQL Server
+-Seed Data for Roles and Users
+
+How the System Works 
+-Lecturer → Coordinator → Manager → HR
+-Lecturer submits monthly claim
+-Coordinator reviews & approves/rejects
+-Manager finalises the claim
+-HR manages users and generates summary reports
+-Delivered Project Outcomes (Rubric-Aligned)
+-Required Feature	Implemented
+-Full working MVC system	
+-Role-based login	
+-Dashboards per role	
+-Document upload	
+-Reporting & downloads	
+-Clean UI	
+Validation & error handling	
