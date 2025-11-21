@@ -28,16 +28,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Coordinator/ClaimHistory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcQ2xhaW1IaXN0b3J5LmNzaHRtbA==
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/AcademicManager/Claims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNNYW5hZ2VyXENsYWltcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Coordinator/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcRGFzaGJvYXJkLmNzaHRtbA==
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/AcademicManager/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNNYW5hZ2VyXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Coordinator/VerifyClaim.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29vcmRpbmF0b3JcVmVyaWZ5Q2xhaW0uY3NodG1s
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/AcademicManager/ReviewClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNhZGVtaWNNYW5hZ2VyXFJldmlld0NsYWltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Home/FeatureComingSoon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGZWF0dXJlQ29taW5nU29vbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Home/Index.cshtml]
@@ -52,28 +56,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/HR/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcQ3JlYXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/HR/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/HR/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/HR/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcUmVwb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/HR/ViewUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSFJcVmlld1VzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Lecturer/AddClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcQWRkQ2xhaW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Lecturer/Claims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcQ2xhaW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Lecturer/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Lecturer/MyClaims.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcTXlDbGFpbXMuY3NodG1s
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Lecturer/ViewClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcVmlld0NsYWltLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Lecturer/SubmitClaim.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVjdHVyZXJcU3VibWl0Q2xhaW0uY3NodG1s
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/ProgramCoordinator/Claims.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUNvb3JkaW5hdG9yXENsYWltcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Manager/ClaimHistory.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxDbGFpbUhpc3RvcnkuY3NodG1s
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/ProgramCoordinator/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUNvb3JkaW5hdG9yXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Manager/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxEYXNoYm9hcmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Manager/VerifyClaim.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlclxWZXJpZnlDbGFpbS5jc2h0bWw=
+[C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/ProgramCoordinator/ReviewClaim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZ3JhbUNvb3JkaW5hdG9yXFJldmlld0NsYWltLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/27817/Source/Repos/Prog2B-Assignment/prog practice/Views/Shared/Error.cshtml]

@@ -230,3 +230,251 @@ C:\Users\27817\source\repos\prog practice\prog practice\bin\Debug\net9.0\runtime
 C:\Users\27817\source\repos\prog practice\prog practice\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\27817\source\repos\prog practice\prog practice\obj\Debug\net9.0\prog practice.csproj.AssemblyReference.cache
 C:\Users\27817\source\repos\prog practice\prog practice\obj\Debug\net9.0\prog pra.EBEB29B5.Up2Date
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\appsettings.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\prog practice.staticwebassets.endpoints.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\prog practice.staticwebassets.runtime.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\prog practice.exe
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\prog practice.deps.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\prog practice.runtimeconfig.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\prog practice.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\prog practice.pdb
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Azure.Core.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Azure.Identity.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Humanizer.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Build.Locator.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Mono.TextTemplating.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.ClientModel.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.CodeDom.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Composition.Convention.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Composition.Hosting.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Composition.Runtime.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Composition.TypedParts.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Drawing.Common.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Formats.Asn1.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Memory.Data.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Runtime.Caching.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Security.Permissions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Text.Json.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\System.Windows.Extensions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.csproj.AssemblyReference.cache
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.AssemblyInfoInputs.cache
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.AssemblyInfo.cs
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.csproj.CoreCompileInputs.cache
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.RazorAssemblyInfo.cache
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.RazorAssemblyInfo.cs
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.sourcelink.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\scopedcss\bundle\prog practice.styles.css
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\scopedcss\projectbundle\prog practice.bundle.scp.css
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\xc0v5y0no7-b9sayid5wm.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\i1fsjwun01-61n19gt1b8.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\cewkj4mkdx-xtxxf3hu2r.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\haapyh3i8k-bqjiyaj88i.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\5i9kulxc62-c2jlpeoesf.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\5254rvcbl7-erw9l3u2r3.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\oy1qzk0fk3-aexeepp0ev.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\d7qgihbge1-d7shbmvgxk.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\9emb1ozlm5-ausgxo2sd3.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\vw6aszvnl8-k8d9w2qqmf.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\xoqr4xty9u-cosvhxvwiu.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\ys4tzi3lpm-ub07r2b239.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\22i9fvoluw-fvhpjtyr6v.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\lk4lw5ib3l-b7pk76d08c.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\wyn78w77fi-fsbi9cje9m.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\mlhnnj9zsp-rzd6atqjts.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\y5jwh7x0n9-ee0r1s7dh0.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\ftxadulyab-dxx9fxp4il.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\326xrshqed-jd9uben2k1.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\hkri1jy91i-khv3u5hwcm.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\7n41m5w8zq-r4e9w2rdcm.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\vcs2xmhj4q-lcd1t2u6c8.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\vtgggpnshp-c2oey78nd0.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\fzr8lulhbi-tdbxkamptv.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\fg39odk1kg-j5mq2jizvt.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\bmzrun6l4d-06098lyss8.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\b90kubayow-nvvlpmu67g.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\zds9475kzc-s35ty4nyc5.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\oy14ns6rqg-pj5nd1wqec.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\uj6zyj1ji7-46ein0sx1k.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\eyz9p9gtt9-v0zj4ognzu.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\ep9je85aq2-37tfw0ft22.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\dr1vpxosw2-hrwsygsryq.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\2ggvbwffp4-pk9g2wxc8p.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\t8elssmyco-ft3s53vfgj.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\qcmoplapqm-6cfz1n2cew.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\3jarmjylmh-6pdc2jztkx.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\grvd78g4xn-493y06b0oq.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\wbv6sid266-iovd86k7lj.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\5270d9tqr6-vr1egmr9el.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\mqmloj9kwi-kbrnm935zg.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\5hnwlkarqg-jj8uyg4cgr.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\y3vofmj5b5-y7v9cxd14o.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\5xmqmu2te3-notf2xhcfb.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\4p25iinmfp-h1s4sie4z3.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\bpujukihin-63fj8s7r0e.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\jqjokrdke6-0j3bgjxly4.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\tewcbyjnex-47otxtyo56.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\ofhkkx1l5l-4v8eqarkd7.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\39klkqtf9t-356vix0kms.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\pwsq2me3fz-83jwlth58m.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\cmofdn2pin-mrlpezrjn3.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\gjks1nupcc-lzl9nlhx6b.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\s4dft84if0-ag7o75518u.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\c18qil9fwi-x0q3zqp4vz.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\hhqogp431p-0i3buxo5is.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\drf6d5b8c8-o1o13a6vjx.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\olkeka1ish-ttgo8qnofa.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\yj8grdj8j7-2z0ns9nrw6.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\ssqpg2lzv9-muycvpuwrr.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\ko4re9chv0-87fc7y1x7t.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\p4yscozxv7-mlv21k5csn.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\vea1vvxqgd-p4mgosu4yd.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\compressed\tq01nwsvoe-p4mgosu4yd.gz
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets\msbuild.prog practice.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets\msbuild.prog practice.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets\msbuild.build.prog practice.props
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.prog practice.props
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.prog practice.props
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog pra.EBEB29B5.Up2Date
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\refint\prog practice.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.pdb
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\prog practice.genruntimeconfig.cache
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\obj\Debug\net9.0\ref\prog practice.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.barcodes.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.bouncy-castle-connector.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.forms.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.io.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.kernel.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.layout.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.pdfa.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.pdfua.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.sign.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.styledxmlparser.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.svg.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.commons.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\27817\Source\Repos\Prog2B-Assignment\prog practice\bin\Debug\net9.0\itext.bouncy-castle-adapter.dll

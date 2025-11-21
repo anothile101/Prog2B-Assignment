@@ -30,20 +30,12 @@ namespace prog_practice.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ClaimID"));
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("ClaimStatus")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
-                    b.Property<DateTime>("ClaimDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateSubmitted")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
+                    b.Property<string>("FullName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DocumentPath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("HourlyRate")
@@ -52,63 +44,223 @@ namespace prog_practice.Migrations
                     b.Property<decimal>("HoursWorked")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("LastUpdated")
+                    b.Property<string>("ModuleCode")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SubmissionDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("LecturerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("Month")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("UserID1")
+                        .HasColumnType("int");
 
                     b.HasKey("ClaimID");
+
+                    b.HasIndex("UserID");
+
+                    b.HasIndex("UserID1");
 
                     b.ToTable("Claims");
                 });
 
-            modelBuilder.Entity("prog_practice.Models.ClaimHistory", b =>
+            modelBuilder.Entity("prog_practice.Models.Document", b =>
                 {
-                    b.Property<int>("HistoryID")
+                    b.Property<int>("DocumentID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("HistoryID"));
-
-                    b.Property<string>("Action")
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DocumentID"));
 
                     b.Property<int>("ClaimID")
                         .HasColumnType("int");
 
-                    b.Property<string>("PerformedBy")
+                    b.Property<string>("FileName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Timestamp")
+                    b.Property<DateTime>("UploadDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("HistoryID");
+                    b.HasKey("DocumentID");
 
                     b.HasIndex("ClaimID");
 
-                    b.ToTable("ClaimHistories");
+                    b.ToTable("Documents");
                 });
 
-            modelBuilder.Entity("prog_practice.Models.ClaimHistory", b =>
+            modelBuilder.Entity("prog_practice.Models.Review", b =>
+                {
+                    b.Property<int>("ReviewID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewID"));
+
+                    b.Property<int>("ClaimID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ClaimID1")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ReviewDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ReviewStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ReviewType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ReviewID");
+
+                    b.HasIndex("ClaimID");
+
+                    b.HasIndex("ClaimID1");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Reviews");
+                });
+
+            modelBuilder.Entity("prog_practice.Models.User", b =>
+                {
+                    b.Property<int>("UserID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserID"));
+
+                    b.Property<string>("ContactNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("HourlyRate")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RoleID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserID");
+
+                    b.HasIndex("RoleID");
+
+                    b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserID = 1,
+                            ContactNumber = "0987654321",
+                            FullName = "John Doe",
+                            HourlyRate = 300m,
+                            Password = "Password@j1",
+                            RoleID = 1,
+                            UserEmail = "John@gmail.com"
+                        },
+                        new
+                        {
+                            UserID = 2,
+                            ContactNumber = "1234567890",
+                            FullName = "Angel Smith",
+                            HourlyRate = 350m,
+                            Password = "Password@a2",
+                            RoleID = 2,
+                            UserEmail = "angel@gmail.com"
+                        },
+                        new
+                        {
+                            UserID = 3,
+                            ContactNumber = "1357908642",
+                            FullName = "Lulu Mkhize",
+                            HourlyRate = 400m,
+                            Password = "Password@l31",
+                            RoleID = 3,
+                            UserEmail = "lulu@gmail.com"
+                        });
+                });
+
+            modelBuilder.Entity("prog_practice.Models.UserRole", b =>
+                {
+                    b.Property<int>("RoleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoleID"));
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("RoleID");
+
+                    b.ToTable("UserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            RoleID = 1,
+                            RoleName = "Lecturer"
+                        },
+                        new
+                        {
+                            RoleID = 2,
+                            RoleName = "ProgrammeCoordinator"
+                        },
+                        new
+                        {
+                            RoleID = 3,
+                            RoleName = "AcademicManager"
+                        });
+                });
+
+            modelBuilder.Entity("prog_practice.Models.Claim", b =>
+                {
+                    b.HasOne("prog_practice.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("prog_practice.Models.User", null)
+                        .WithMany("Claims")
+                        .HasForeignKey("UserID1");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("prog_practice.Models.Document", b =>
                 {
                     b.HasOne("prog_practice.Models.Claim", "Claim")
-                        .WithMany("ClaimHistories")
+                        .WithMany("Documents")
                         .HasForeignKey("ClaimID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -116,9 +268,57 @@ namespace prog_practice.Migrations
                     b.Navigation("Claim");
                 });
 
+            modelBuilder.Entity("prog_practice.Models.Review", b =>
+                {
+                    b.HasOne("prog_practice.Models.Claim", "Claim")
+                        .WithMany()
+                        .HasForeignKey("ClaimID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("prog_practice.Models.Claim", null)
+                        .WithMany("Reviews")
+                        .HasForeignKey("ClaimID1");
+
+                    b.HasOne("prog_practice.Models.User", "User")
+                        .WithMany("Reviews")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Claim");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("prog_practice.Models.User", b =>
+                {
+                    b.HasOne("prog_practice.Models.UserRole", "UserRole")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("UserRole");
+                });
+
             modelBuilder.Entity("prog_practice.Models.Claim", b =>
                 {
-                    b.Navigation("ClaimHistories");
+                    b.Navigation("Documents");
+
+                    b.Navigation("Reviews");
+                });
+
+            modelBuilder.Entity("prog_practice.Models.User", b =>
+                {
+                    b.Navigation("Claims");
+
+                    b.Navigation("Reviews");
+                });
+
+            modelBuilder.Entity("prog_practice.Models.UserRole", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

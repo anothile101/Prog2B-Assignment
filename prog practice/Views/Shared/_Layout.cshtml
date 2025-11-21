@@ -1,64 +1,86 @@
-﻿<!DOCTYPE html>
+﻿﻿
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - prog_practice</title>
-    <script type="importmap"></script>
+    <title>@ViewData["Title"] - Claim System</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/prog_practice.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ContractMonthlyClaimSystem.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">prog_practice</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Lecturer" asp-action="Dashboard">Lecturer Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Lecturer" asp-action="SubmitClaim">Submit Claim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Lecturer" asp-action="MyClaims">My Claims</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Coordinator" asp-action="Dashboard">Coordinator Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-controller="Manager" asp-action="Dashboard">Manager Dashboard</a>
-                        </li>
+        @if (Context.Session.GetInt32("UserID") != null)
+        {
+            var role = Context.Session.GetString("UserRole");
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Claim System</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <!-- Default Menu -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display:@(role == "HR" ? "none" : "flex");">
+                            <li class="nav-item">
+                                <a class="nav-link active fw-bold" asp-controller="Lecturer" asp-action="Dashboard">Dashboard</a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link" asp-controller="Lecturer" asp-action="Claims">Claims</a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link" href="#">Documents</a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link" href="#">My Profile</a>
+                            </li>
+                        </ul>
+
+                        <!-- HR Menu -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="display:@(role == "HR" ? "flex" : "none");">
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link" asp-controller="HR" asp-action="Dashboard">Dashboard</a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link" asp-controller="HR" asp-action="CreateUser">Add User</a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link" asp-controller="HR" asp-action="ViewUsers">View Users</a>
+                            </li>
+                            <li class="nav-item fw-bold">
+                                <a class="nav-link" asp-controller="HR" asp-action="Reports">Reports</a>
+                            </li>
+                        </ul>
+
+                        <!-- Role & Logout -->
+                        <div class="d-flex align-items-center">
+                            <a class="btn btn-secondary" asp-controller="Home" asp-action="Logout">Logout</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        }
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted mt-4">
         <div class="container">
-            &copy; 2025 - prog_practice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - ContractMonthlyClaimSystem - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
