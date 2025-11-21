@@ -1,0 +1,101 @@
+﻿@model IEnumerable<prog_practice.Models.LecturerReport>
+
+<div class="container mt-4">
+    <h4 class="mb-4">Lecturer Reports</h4>
+
+    <!-- Filter + Download Row -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+        <!-- Filter Form -->
+        <form method="get" asp-action="Reports" class="d-flex gap-2 flex-wrap">
+            <select name="month" class="form-select" asp-items="ViewBag.Months">
+                <option value="">-- Select Month --</option>
+            </select>
+            <select name="lecturer" class="form-select" asp-items="ViewBag.Lecturers">
+                <option value="">-- Select Lecturer --</option>
+            </select>
+            <select name="status" class="form-select" asp-items="ViewBag.Statuses">
+                <option value="">-- Select Status --</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Filter</button>
+            <a href="@Url.Action("Reports", "HR")" class="btn btn-secondary">Reset</a>
+        </form>
+
+        <!-- Download PDF Form -->
+        <form method="get" asp-action="DownloadReport" class="d-flex gap-2 flex-wrap">
+            <input type="hidden" name="month" value="@(ViewBag.SelectedMonth ?? "")" />
+            <input type="hidden" name="lecturer" value="@(ViewBag.SelectedLecturer ?? "All")" />
+            <input type="hidden" name="status" value="@(ViewBag.SelectedStatus ?? "All")" />
+            <button type="submit" class="btn btn-success">Download PDF</button>
+        </form>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-warning mt-3">
+            No records found for the selected filters.
+        </div>
+    }
+    else
+    {
+        <!-- Accordion Reports Start -->
+        <div class="accordion" id="lecturerReports">
+            @foreach (var report in Model)
+            {
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading@report.Lecturer.GetHashCode()">
+                        <button class="accordion-button collapsed bg-light text-dark fw-semibold shadow-sm"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapse@report.Lecturer.GetHashCode()"
+                                aria-expanded="false"
+                                aria-controls="collapse@report.Lecturer.GetHashCode()"
+                                style="padding: 1rem 1.25rem; border-radius: 0.25rem; margin-bottom: 0.5rem;">
+                            @report.Lecturer
+                            <span class="ms-auto text-muted" style="font-weight: normal;">
+                                Total Hours: @report.TotalHours | Total Amount Claimed: @report.TotalAmount.ToString("C")
+                            </span>
+                        </button>
+                    </h2>
+                    <!-- Removed data-bs-parent attribute -->
+                    <div id="collapse@report.Lecturer.GetHashCode()" class="accordion-collapse collapse" aria-labelledby="heading@report.Lecturer.GetHashCode()">
+                        <div class="accordion-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Claim ID</th>
+                                            <th>Module Code</th>
+                                            <th>Hours Worked</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Submission Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var claim in report.Claims)
+                                        {
+                                            <tr>
+                                                <td>@claim.ClaimID</td>
+                                                <td>@claim.ModuleCode</td>
+                                                <td>@claim.HoursWorked</td>
+                                                <td>@claim.Total.ToString("C")</td>
+                                                <td>
+                                                    <span class="badge @(claim.ClaimStatus == "Approved" ? "bg-success" : claim.ClaimStatus == "Rejected" ? "bg-danger" : "bg-warning")">
+                                                        @claim.ClaimStatus
+                                                    </span>
+                                                </td>
+                                                <td>@claim.SubmissionDate.ToString("yyyy-MM-dd")</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    <a asp-action="Dashboard" class="btn btn-outline-secondary mt-3">Back to Dashboard</a>
+</div>
