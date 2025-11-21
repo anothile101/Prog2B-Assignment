@@ -1,56 +1,105 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using prog_practice.Data;
 using prog_practice.Models;
+using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
-namespace prog_practice.Controllers;
-
-public class HomeController : Controller
+namespace prog_practice.Controllers
 {
-    [HttpGet]
-    public IActionResult Login()
+    public class HomeController : Controller
     {
-        return View();
-    }
+        private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext _context;
 
-    [HttpPost]
-    [HttpPost]
-    public IActionResult Login(string username, string password, string role)
-    {
-        if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
-            ViewBag.Error = "Please enter both a username and password.";
+            _logger = logger;
+            _context = context;
+        }
+
+        public IActionResult Index()
+        {
             return View();
         }
 
-        if (role == "Coordinator")
-            return RedirectToAction("Dashboard", "Coordinator");
-        else if (role == "Manager")
-            return RedirectToAction("Dashboard", "Manager");
-        else
-            return RedirectToAction("Dashboard", "Lecturer");
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult FeatureComingSoon(string featureName, string userRole)
+        {
+            ViewData["FeatureName"] = featureName;
+            ViewData["UserRole"] = userRole; // Pass the current user role
+            return View();
+        }
+
+
+        // GET: Home/Login
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        // POST: Home/Login
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(Login model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var user = _context.Users
+                .Include(u => u.UserRole)
+                .FirstOrDefault(u => u.UserEmail == model.UserEmail && u.Password == model.Password);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "Invalid email or password.");
+                return View(model);
+            }
+
+            // STORE USER SESSION
+            HttpContext.Session.SetInt32("UserID", user.UserID);
+            HttpContext.Session.SetString("UserRole", user.UserRole.RoleName);
+            HttpContext.Session.SetString("FullName", user.FullName ?? "");
+
+            // Redirect based on role
+            switch (user.UserRole.RoleName)
+            {
+                case "Lecturer":
+                    return RedirectToAction("Dashboard", "Lecturer");
+
+                case "ProgrammeCoordinator":
+                    return RedirectToAction("Dashboard", "ProgramCoordinator");
+
+                case "AcademicManager":
+                    return RedirectToAction("Dashboard", "AcademicManager");
+
+                case "HR":
+                    return RedirectToAction("Dashboard", "HR");
+
+                default:
+                    ModelState.AddModelError("", "Invalid role assigned to this account.");
+                    return View(model);
+            }
+        }
+
+
+
+        // Logout action
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Home");
+        }
     }
 }
-
-//    private readonly ILogger<HomeController> _logger;
-
-//    public HomeController(ILogger<HomeController> logger)
-//    {
-//        _logger = logger;
-//    }
-
-//    public IActionResult Index()
-//    {
-//        return View();
-//    }
-
-//    public IActionResult Privacy()
-//    {
-//        return View();
-//    }
-
-//    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-//    public IActionResult Error()
-//    {
-//        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-//    }
-//}

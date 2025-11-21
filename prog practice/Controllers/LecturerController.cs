@@ -1,106 +1,247 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using prog_practice.Data;
 using prog_practice.Models;
+//using System.Reflection.Metadata;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
 
 namespace prog_practice.Controllers
 {
 
         public class LecturerController : Controller
         {
-        
-            private readonly AppDbContext _context;
-            private readonly IWebHostEnvironment _environment;
 
-            public LecturerController(AppDbContext context, IWebHostEnvironment environment)
+        private readonly AppDbContext _context;
+
+        public LecturerController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        //Part 3.2
+        private int GetLoggedInUserId()
+        {
+            int? userId = HttpContext.Session.GetInt32("UserID");
+
+            if (userId == null)
             {
-                _context = context;
-                _environment = environment;
+                // Not logged in > redirect to login page
+                RedirectToAction("Login", "Home");
+                return 0; // failsafe
             }
 
-            // GET: SubmitClaim
-            public IActionResult SubmitClaim()
-            {
-                return View();
-            }
+            return userId.Value;
+        }
 
-        // POST: SubmitClaim
+
+        // GET: Lecturer Dashboard
+        public IActionResult Dashboard()
+        {
+            var userId = GetLoggedInUserId();
+            var claims = _context.Claims
+                                 .Where(c => c.UserID == userId)
+                                 .Include(c => c.Documents)
+                                 .OrderByDescending(c => c.SubmissionDate)
+                                 .ToList();
+
+            // Dashboard stats
+            var totalClaims = claims.Count;
+            var pending = claims.Count(c => c.ClaimStatus == "Pending");
+            var approved = claims.Count(c => c.ClaimStatus == "Approved");
+            var rejected = claims.Count(c => c.ClaimStatus == "Rejected");
+
+            ViewBag.TotalClaims = totalClaims;
+            ViewBag.PendingClaims = pending;
+            ViewBag.ApprovedClaims = approved;
+            ViewBag.RejectedClaims = rejected;
+
+            return View(claims); // pass claims to the view
+        }
+
+
+        // GET: My Claims
+        public IActionResult Claims()
+        {
+            var userId = GetLoggedInUserId();
+            var claims = _context.Claims
+                                 .Where(c => c.UserID == userId)
+                                 .Include(c => c.Documents)
+                                 .OrderByDescending(c => c.SubmissionDate)
+                                 .ToList();
+
+            return View(claims);
+        }
+
+        // GET: AddClaim
+        public IActionResult AddClaim()
+        {
+            var userId = GetLoggedInUserId();
+            var user = _context.Users.Find(userId);
+
+            if (user == null)
+                return BadRequest("User not found.");
+
+            var claim = new Claim
+            {
+                UserID = user.UserID,
+                FullName = user.FullName,
+                HourlyRate = user.HourlyRate,
+                SubmissionDate = DateTime.Now
+            };
+
+            return View(claim);
+
+            // total hours
+            var totalHoursThisMonth = _context.Claims
+                .Where(c => c.UserID == user.UserID
+                         && c.SubmissionDate.Month == DateTime.Now.Month
+                         && c.SubmissionDate.Year == DateTime.Now.Year)
+                .Sum(c => (decimal?)c.HoursWorked) ?? 0;
+
+            ViewBag.RemainingHours = 180 - totalHoursThisMonth;
+
+        }
+
+
+        // POST: AddClaim
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SubmitClaim(Claim model, IFormFile? ClaimDocument)
+        public IActionResult AddClaim(Claim claim, List<IFormFile>? files)
         {
-            if (!ModelState.IsValid)
-                return View(model);
+            var userId = GetLoggedInUserId();
+            var user = _context.Users.Find(userId);
 
-            // Auto-calculate
-            model.Amount = model.HoursWorked * model.HourlyRate;
-            model.Status = "Pending";
-            model.DateSubmitted = DateTime.Now;
+            if (user == null)
+                return BadRequest("User not found.");
 
-            // Handle file upload
-            if (ClaimDocument != null && ClaimDocument.Length > 0)
+            // FORCE correct values 
+            claim.UserID = user.UserID;
+            claim.FullName = user.FullName;
+            claim.HourlyRate = user.HourlyRate;
+            claim.SubmissionDate = DateTime.Now;
+            claim.ClaimStatus = "Submitted";
+
+            // Monthly hours validation
+            var currentMonth = DateTime.Now.Month;
+            var currentYear = DateTime.Now.Year;
+
+            var totalHoursThisMonth = _context.Claims
+                .Where(c => c.UserID == user.UserID &&
+                            c.SubmissionDate.Month == currentMonth &&
+                            c.SubmissionDate.Year == currentYear)
+                .Sum(c => (decimal?)c.HoursWorked) ?? 0;
+
+            var remainingHours = 180 - totalHoursThisMonth;
+
+            if (claim.HoursWorked > remainingHours)
             {
-                string uploadFolder = Path.Combine(_environment.WebRootPath, "Uploads");
-                if (!Directory.Exists(uploadFolder))
-                    Directory.CreateDirectory(uploadFolder);
-
-                string uniqueFile = $"{Guid.NewGuid()}_{ClaimDocument.FileName}";
-                string filePath = Path.Combine(uploadFolder, uniqueFile);
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    ClaimDocument.CopyTo(stream);
-                }
-
-                model.DocumentPath = "/Uploads/" + uniqueFile;
+                ModelState.AddModelError("HoursWorked", $"You can only claim up to {remainingHours} more hours this month.");
             }
 
-            // Save the claim itself first
-            _context.Claims.Add(model);
+            if (!ModelState.IsValid)
+            {
+                ViewBag.RemainingHours = remainingHours;
+                return View(claim);
+            }
+
+            // CALCULATE TOTAL
+            claim.Total = claim.HoursWorked * claim.HourlyRate;
+
+            // SAVE CLAIM
+            _context.Claims.Add(claim);
             _context.SaveChanges();
 
-            //  Then log the claim submission in ClaimHistory
-            _context.ClaimHistories.Add(new ClaimHistory
+            // FILE UPLOADS
+
+            if (files != null && files.Count > 0)
             {
-                ClaimID = model.ClaimID,
-                Action = "Claim submitted by Lecturer",
-                PerformedBy = "Lecturer",
-                Timestamp = DateTime.Now
-            });
+                string uploadPath = Path.Combine("wwwroot", "uploads");
+                if (!Directory.Exists(uploadPath))
+                    Directory.CreateDirectory(uploadPath);
 
-            _context.SaveChanges(); // save the history entry
+                List<string> failedFiles = new List<string>();
+                var allowedExtensions = new[] { ".pdf", ".docx", ".xlsx" };
+                const long maxFileSize = 20 * 1024 * 1024;
 
-            TempData["Success"] = "Claim submitted successfully!";
+                foreach (var file in files)
+                {
+                    try
+                    {
+                        var ext = Path.GetExtension(file.FileName).ToLower();
+
+                        if (!allowedExtensions.Contains(ext))
+                        {
+                            failedFiles.Add($"{file.FileName} (Invalid type)");
+                            continue;
+                        }
+
+                        if (file.Length > maxFileSize)
+                        {
+                            failedFiles.Add($"{file.FileName} (Exceeds 20MB)");
+                            continue;
+                        }
+
+                        string filePath = Path.Combine(uploadPath, Guid.NewGuid() + ext);
+
+                        using var stream = new FileStream(filePath, FileMode.Create);
+                        file.CopyTo(stream);
+
+                        _context.Documents.Add(new Document
+                        {
+                            ClaimID = claim.ClaimID,
+                            FileName = Path.GetFileName(filePath),
+                            UploadDate = DateTime.Now
+                        });
+                    }
+                    catch
+                    {
+                        failedFiles.Add($"{file.FileName} (Failed to upload)");
+                    }
+                }
+
+                _context.SaveChanges();
+
+                if (failedFiles.Any())
+                {
+                    ViewBag.UploadError = "Some files failed: " + string.Join(", ", failedFiles);
+                    return View(claim);
+                }
+            }
+
             return RedirectToAction("Dashboard");
         }
 
-
-
-        // GET: MyClaims
-        public IActionResult MyClaims(DateTime? searchDate, string? status)
+        [HttpPost]
+        public IActionResult TestRedirect()
         {
-            var claims = _context.Claims.AsQueryable();
-
-            if (searchDate.HasValue)
-                claims = claims.Where(c => c.ClaimDate.Date == searchDate.Value.Date);
-
-            if (!string.IsNullOrEmpty(status))
-                claims = claims.Where(c => c.Status == status);
-
-            return View(claims.OrderByDescending(c => c.DateSubmitted).ToList());
+            return RedirectToAction("Dashboard");
         }
 
+        // GET: View Claim Details
+        public IActionResult ViewClaim(int id)
+        {
+            var claim = _context.Claims
+                .Where(c => c.ClaimID == id)
+                .Select(c => new Claim
+                {
+                    ClaimID = c.ClaimID,
+                    SubmissionDate = c.SubmissionDate,
+                    HoursWorked = c.HoursWorked,
+                    HourlyRate = c.HourlyRate,
+                    Total = c.Total,
+                    ClaimStatus = c.ClaimStatus,
+                    Notes = c.Notes,
+                    Documents = c.Documents
+                })
+                .FirstOrDefault();
 
-        // GET: Dashboard
-        public IActionResult Dashboard()
+            if (claim == null)
             {
-                var claims = _context.Claims.ToList();
-                ViewBag.TotalClaims = claims.Count;
-                ViewBag.Pending = claims.Count(c => c.Status == "Pending");
-                ViewBag.Approved = claims.Count(c => c.Status == "Approved");
-                ViewBag.Rejected = claims.Count(c => c.Status == "Rejected");
-                ViewBag.RecentClaims = claims.OrderByDescending(c => c.DateSubmitted).Take(5).ToList();
-
-                return View();
+                return NotFound();
             }
+
+            return View(claim);
         }
     }
+}
