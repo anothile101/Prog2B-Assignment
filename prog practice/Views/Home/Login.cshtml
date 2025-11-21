@@ -1,42 +1,44 @@
-﻿@{
+﻿@model prog_practice.Models.Login
+
+@{
     ViewData["Title"] = "Login";
 }
 
-<div style="max-width:400px; margin:auto; margin-top:100px; background:#f9f9f9;
-            border-radius:15px; padding:30px; box-shadow:0 4px 10px rgba(0,0,0,0.1);
-            text-align:center; font-family:Arial;">
-    <h2 style="color:black;">Contract Monthly Claim System Login</h2>
-    <hr />
+<div class="container mt-5" style="max-width: 400px;">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Welcome again!</h2>
+        <p class="text-muted">Log in to view your dashboard</p>
+    </div>
 
-    @if (ViewBag.Error != null)
-    {
-        <div style="background:#f8d7da; color:#721c24; padding:10px; border-radius:8px; margin-bottom:10px;">
-            @ViewBag.Error
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-4">
+            <h4 class="card-title mb-4 text-center">Login</h4>
+
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="UserEmail" class="form-label"></label>
+                    <input asp-for="UserEmail" class="form-control" placeholder="Enter your email" />
+                    <span asp-validation-for="UserEmail" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Enter your password" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
         </div>
-    }
+    </div>
 
-    <form method="post" action="/Home/Login">
-        <div style="text-align:left; margin-bottom:15px;">
-            <label><strong>Username:</strong></label>
-            <input type="text" name="username" required
-                   style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;" />
-        </div>
-
-        <div style="text-align:left; margin-bottom:20px;">
-            <label><strong>Password:</strong></label>
-            <input type="password" name="password" required
-                   style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;" />
-        </div>
-
-        <button type="submit"
-                style="background:black; color:white; border:none; padding:12px 25px; border-radius:10px; font-size:16px;">
-            Login
-        </button>
-    </form>
+    <div class="text-center mt-3">
+        <small class="text-muted">For assistance, please reach out to your administrator.</small>
+    </div>
 </div>
 
-<select name="role" style="width:100%; padding:10px; border-radius:8px; border:1px solid #ccc;">
-    <option value="Lecturer">Lecturer</option>
-    <option value="Coordinator">Coordinator</option>
-    <option value="Manager">Manager</option>
-</select>
+@section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+}

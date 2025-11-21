@@ -1,0 +1,146 @@
+﻿@{
+    var feature = ViewBag.FeatureName as string ?? "";
+    var role = ViewBag.UserRole as string ?? "";
+    ViewData["Title"] = feature;
+}
+
+<div class="container mt-4">
+
+    <div class="card shadow-sm rounded-3">
+        <div class="card-body">
+
+            <h3 class="mb-3 text-primary">@feature</h3>
+            <p class="text-muted">You are viewing this as: <strong>@role</strong></p>
+            <hr />
+
+            <!-- HELP & SUPPORT -->
+            @if (feature.Contains("Help"))
+            {
+                <h4>Need Help?</h4>
+                <p class="mt-3">
+                    If you get stuck at any point, try the following steps:
+                </p>
+                <ul>
+                    <li>Make sure you are logged in with the correct role (Lecturer / Coordinator / Manager / HR).</li>
+                    <li>Use the navigation menu or dashboard buttons to access your features.</li>
+                    <li>
+                        If submitting a claim, ensure:
+                        <ul>
+                            <li>Your hours and rate are correct.</li>
+                            <li>A document is attached if required.</li>
+                            <li>Your claim description is clear.</li>
+                        </ul>
+                    </li>
+                    <li>If a page does not load, refresh it and try again.</li>
+                    <li>If you still need assistance, contact system support or the HR department.</li>
+                </ul>
+
+                <p class="mt-3 text-primary fst-italic">
+                    Your success matters — reach out anytime you feel stuck.
+                </p>
+            }
+
+            <!-- GENERATE REPORTS -->
+            @if (feature.Contains("Generate Reports"))
+            {
+                <h4>Reports & Analytics</h4>
+                <p class="mt-3">
+                    This section will allow you to generate:
+                </p>
+                <ul>
+                    <li>Monthly Claim Summary</li>
+                    <li>Lecturer Performance Reports</li>
+                    <li>Approved / Rejected Claims Charts</li>
+                    <li>Role-based analytics for your department</li>
+                </ul>
+
+                <button class="btn btn-secondary mt-3" disabled>Coming Soon</button>
+            }
+
+            <!-- AUDIT TRAIL -->
+            @if (feature.Contains("Audit"))
+            {
+                <h4>Audit Trail</h4>
+                <p class="mt-3">
+                    This feature will allow managers to track all actions taken by:
+                </p>
+                <ul>
+                    <li>Lecturers submitting claims</li>
+                    <li>Coordinators approving or rejecting claims</li>
+                    <li>Academic managers finalising decisions</li>
+                    <li>HR actions related to user accounts</li>
+                </ul>
+
+                <p class="mt-3 text-warning">Full transparency, full accountability.</p>
+            }
+
+            <!-- DOWNLOAD FORM -->
+            @if (feature.Contains("Download Claim Form"))
+            {
+                <h4>Download Claim Form</h4>
+                <p class="mt-3">
+                    Here you will soon be able to download:
+                </p>
+                <ul>
+                    <li>Standard claim submission form (PDF)</li>
+                    <li>Hours-worked spreadsheet (Excel)</li>
+                    <li>Verification cover sheet</li>
+                </ul>
+
+                <button class="btn btn-info" disabled>Download Coming Soon</button>
+            }
+
+            <!-- MANAGE LECTURERS -->
+            @if (feature.Contains("Manage Lecturers"))
+            {
+                <h4>Manage Lecturers</h4>
+                <p class="mt-3">
+                    Coordinators will soon be able to:
+                </p>
+                <ul>
+                    <li>View all lecturers</li>
+                    <li>Check claim submission activity</li>
+                    <li>Assign and modify workload</li>
+                    <li>Monitor monthly performance</li>
+                </ul>
+            }
+
+            <!-- VIEW ALL RECORDS -->
+            @if (feature.Contains("View All Records"))
+            {
+                <h4>Full Claim Record History</h4>
+                <p class="mt-3">
+                    This feature will allow Academic Managers to view:
+                </p>
+                <ul>
+                    <li>All claims ever submitted</li>
+                    <li>Claim history per lecturer</li>
+                    <li>Approval & rejection dates</li>
+                    <li>Manager comments and activity logs</li>
+                </ul>
+            }
+
+            <!-- DOWNLOAD REPORT -->
+            @if (feature.Contains("Download Report"))
+            {
+                <h4>Download Reports</h4>
+                <p class="mt-3">
+                    You will be able to export:
+                </p>
+                <ul>
+                    <li>Monthly or weekly claims</li>
+                    <li>Lecturer-specific summaries</li>
+                    <li>Coordinator performance sheets</li>
+                    <li>Full academic year statistics</li>
+                </ul>
+
+                <button class="btn btn-secondary" disabled>Export Coming Soon</button>
+            }
+
+            <hr />
+
+            <a href="javascript:history.back()" class="btn btn-outline-secondary">Back</a>
+
+        </div>
+    </div>
+</div>
