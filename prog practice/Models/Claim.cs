@@ -1,47 +1,64 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Metadata;
 
 namespace prog_practice.Models
 {
     public class Claim
     {
-       
-            [Key]
-            public int ClaimID { get; set; }
+
+        [Key]
+        public int ClaimID { get; set; }
+
+        [Required, ForeignKey("User")]
+        public int UserID { get; set; }
 
         [Required]
-        public string? LecturerName { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateTime ClaimDate { get; set; }
-
+        public string? FullName { get; set; }
 
         [Required]
-            public string? Title { get; set; }
+        [StringLength(20)]
+        public string? ModuleCode { get; set; }
 
-            [Required]
-            public string? Month { get; set; }
+        [Required]
+        [Column(TypeName = "decimal(18,2)")]
+        [Range(0, 180, ErrorMessage = "Hours worked cannot exceed 180 hours per month.")]
+        public decimal HoursWorked { get; set; }
 
-            [Required]
-            public string? Description { get; set; }
+        // HourlyRate is now read-only and automatically set from the User
+        [Required]
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal HourlyRate { get; set; }
 
-            [Required]
-            public decimal HoursWorked { get; set; }
+        [Required]
+        [Column(TypeName = "decimal(18,2)")]
+        [DataType(DataType.Currency)]
+        public decimal Total { get; set; }
 
-            [Required]
-            public decimal HourlyRate { get; set; }
+        [Required]
+        public DateTime SubmissionDate { get; set; }
 
-            public decimal Amount { get; set; }
+        [StringLength(20)]
+        public string? ClaimStatus { get; set; }
 
-            public string? Status { get; set; }
+        public string? Notes { get; set; }
 
-            public string? DocumentPath { get; set; }
+        // Navigation Properties
+        public User? User { get; set; }
 
-            public DateTime DateSubmitted { get; set; } = DateTime.Now;
+        public ICollection<Document>? Documents { get; set; }
+        public ICollection<Review>? Reviews { get; set; }
 
-        public DateTime LastUpdated { get; set; } = DateTime.Now;
-        public string? UpdatedBy { get; set; }
+        // Method to update hourly rate and total from user
+        public void SetHourlyRateFromUser()
+        {
+            if (User != null)
+            {
+                HourlyRate = User.HourlyRate;
+                Total = HoursWorked * HourlyRate;
+            }
+        }
 
 
-        public ICollection<ClaimHistory>? ClaimHistories { get; set; }
     }
-    }
+}
